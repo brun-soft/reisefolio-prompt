@@ -15,8 +15,6 @@ Eine frühere Webseite oder ein bestimmter Reiseführer wird nicht benötigt. Ge
 
 **📷 Beispiele aus einer bestehenden Reisewebseite**
 
-Die Screenshots zeigen ausgewählte Inhaltsausschnitte ohne persönliche Angaben, Buchungsdaten oder Unterkunftspreise. Eine separate Demo ist geplant. Öffne ein Vorschaubild für die vollständige Ansicht.
-
 | Reiseführer & Ortsinformationen | Tageskarte & Route | Reisewissen & Sprachhilfe |
 |:---:|:---:|:---:|
 | [![Reiseführer: Ortsinformationen zu Passau](assets/screenshots/reisefuehrer-passau.jpg)](assets/screenshots/reisefuehrer-passau.jpg) | [![Tageskarte: Stadtspaziergang durch Passau](assets/screenshots/tageskarte-passau.jpg)](assets/screenshots/tageskarte-passau.jpg) | [![Reisewissen: tschechische Sprachhilfe](assets/screenshots/reisewissen-sprachhilfe.jpg)](assets/screenshots/reisewissen-sprachhilfe.jpg) |
@@ -172,8 +170,6 @@ Reisefolio is a master prompt for ChatGPT. A conversational wizard collects your
 No previous website or specific guidebook is required. Design and content are tailored to the trip.
 
 **📷 Examples from an existing travel website**
-
-These screenshots show selected content without personal details, booking information or accommodation prices. A separate demo is planned. Open a preview image to see it in full.
 
 | Travel guide & place information | Daily map & route | Travel information & language help |
 |:---:|:---:|:---:|
