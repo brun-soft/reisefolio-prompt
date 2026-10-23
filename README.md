@@ -13,6 +13,14 @@ Reisefolio ist ein Masterprompt für ChatGPT. Ein geführter Wizard erfasst Reis
 
 Eine frühere Webseite oder ein bestimmter Reiseführer wird nicht benötigt. Gestaltung und Inhalte werden an die jeweilige Reise angepasst.
 
+**📷 Beispiele aus einer bestehenden Reisewebseite**
+
+Die Screenshots zeigen ausgewählte Inhaltsausschnitte ohne persönliche Angaben, Buchungsdaten oder Unterkunftspreise. Eine separate Demo ist geplant. Öffne ein Vorschaubild für die vollständige Ansicht.
+
+| Reiseführer & Ortsinformationen | Tageskarte & Route | Reisewissen & Sprachhilfe |
+|:---:|:---:|:---:|
+| [![Reiseführer: Ortsinformationen zu Passau](assets/screenshots/reisefuehrer-passau.jpg)](assets/screenshots/reisefuehrer-passau.jpg) | [![Tageskarte: Stadtspaziergang durch Passau](assets/screenshots/tageskarte-passau.jpg)](assets/screenshots/tageskarte-passau.jpg) | [![Reisewissen: tschechische Sprachhilfe](assets/screenshots/reisewissen-sprachhilfe.jpg)](assets/screenshots/reisewissen-sprachhilfe.jpg) |
+
 **🔑 Voraussetzungen**
 
 - **ChatGPT mit mindestens einem Plus-Abo** ist die Voraussetzung für den unterstützten Einsatz dieses Projekts.
@@ -162,6 +170,14 @@ Die Lizenz des Prompts verlangt nicht automatisch eine Namensnennung auf jeder d
 Reisefolio is a master prompt for ChatGPT. A conversational wizard collects your destination, dates, travellers, transport, accommodation, interests, constraints and languages. The prompt then commissions a personal travel website with itineraries, practical travel information and a diary.
 
 No previous website or specific guidebook is required. Design and content are tailored to the trip.
+
+**📷 Examples from an existing travel website**
+
+These screenshots show selected content without personal details, booking information or accommodation prices. A separate demo is planned. Open a preview image to see it in full.
+
+| Travel guide & place information | Daily map & route | Travel information & language help |
+|:---:|:---:|:---:|
+| [![Travel guide: information about Passau](assets/screenshots/reisefuehrer-passau.jpg)](assets/screenshots/reisefuehrer-passau.jpg) | [![Daily map: walking route through Passau](assets/screenshots/tageskarte-passau.jpg)](assets/screenshots/tageskarte-passau.jpg) | [![Travel information: Czech language help](assets/screenshots/reisewissen-sprachhilfe.jpg)](assets/screenshots/reisewissen-sprachhilfe.jpg) |
 
 **🔑 Requirements**
 
