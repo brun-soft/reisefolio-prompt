@@ -1,0 +1,435 @@
+REISEFOLIO – DEUTSCHE ORIGINALFASSUNG
+Projekt: https://github.com/brun-soft/reisefolio-prompt
+Projektinitiator: Michael (brun-soft); gemeinsam mit ChatGPT entwickelt.
+Unterstützte Nutzung: ausschließlich ChatGPT mit mindestens Plus-Abo und den erforderlichen Funktionen für Webseiten, Recherche, Speicherung und Hintergrundaufgaben. Der Prompt allein ersetzt keine fehlenden Dienste.
+Lizenz: CC BY-NC-SA 4.0 – https://creativecommons.org/licenses/by-nc-sa/4.0/ . Namensnennung, nichtkommerzielle Nutzung, Weitergabe von Bearbeitungen unter gleichen Bedingungen. Ohne Gewähr; siehe LICENSE und README im Projekt.
+
+MASTER-PROMPT: REISEWEBSEITE MIT PLANUNG, TAGEBUCH UND AUTOMATISMEN
+
+Diesen gesamten Text in einen neuen Chat kopieren. Die Platzhalter dürfen zunächst offen bleiben: Der Wizard fragt die fehlenden Angaben ab.
+
+==================== BEGINN DES PROMPTS ====================
+
+AUFTRAG
+
+Erstelle für meine nächste Reise eine vollständige, dauerhaft nutzbare Reisewebseite mit Tagesplanung, Karten, Wetter, Reisewissen, Reisetagebuch und einem durch PIN geschützten internen Bereich. Sie soll auf Desktop und Smartphone funktionieren und als PWA installierbar sein.
+
+Konzipiere die Webseite als individuellen digitalen Reiseführer: die Orientierung, Hintergrundinformationen, Ortsbeschreibungen und praktischen Hinweise eines klassischen Offline-Reiseführers, verbunden mit persönlicher Tagesplanung, aktuellen Daten und einem eigenen Reisetagebuch.
+
+Als allgemeines Leitbild können bekannte Reiseführer wie Baedeker oder DuMont dienen. Die folgende eigenständige Beschreibung legt Aufbau und Funktionen fest; ein bestimmtes Buch, eine frühere Reisewebseite oder der Zugriff auf frühere Chats wird nicht vorausgesetzt. Übernimm keine geschützten Texte, Bilder oder Buchlayouts. Entwickle eigene Inhalte und eine eigene Gestaltung.
+
+Die neue Reise erhält ein eigenes Projekt und eigene Daten. Eine vorhandene Webseite, ein Reiseführer oder ein Screenshot kann optional als zusätzliche Referenz dienen, ist aber keine Voraussetzung. Andere Projekte werden nicht verändert.
+
+Grunddaten, soweit bereits bekannt:
+- Reiseziel / Regionen: [REGIONEN, LÄNDER, ORTE]
+- Reisebeginn: [TT.MM.JJJJ]
+- Reiseende einschließlich Rückreise: [TT.MM.JJJJ]
+- Anzahl Reisender: [ANZAHL]
+- Reiseart / Verkehrsmittel: [AUTO / FLUG / BAHN / SCHIFF / KOMBINATION]
+- Hauptsprache: [SPRACHE]
+- Weitere Sprachen: [SPRACHEN ODER KEINE]
+- Sprachmodus: [ALLE VOLLSTÄNDIG BEDIENBAR (STANDARD) / HAUPTSPRACHE BEDIENBAR, WEITERE SPRACHEN STATISCH / BEI BEDARF PRO SPRACHE FESTLEGEN]
+- Besonderheiten und Rahmenbedingungen: [ANGABEN]
+- Optionale Gestaltungsreferenz: [URL / DATEI / REISEFÜHRER / KEINE]
+
+Ungefüllte Platzhalter sind keine Tatsachen. Ergänze sie durch den Wizard. Setze kein Wissen über die Person, frühere Reisen oder frühere Gespräche voraus. Übernimm persönliche Inhalte oder Zugangsdaten aus anderen Projekten nur auf ausdrücklichen Auftrag; erzeuge keine persönlichen Beispieldaten.
+
+1. BEGINNE MIT EINEM WIZARD
+
+Führe den Wizard als Gespräch durch. Stelle je Nachricht höchstens drei klar formulierte Fragen und warte auf meine Antworten. Biete passende Auswahlmöglichkeiten und Freitext an. Frage bereits geklärte Angaben nicht erneut ab. Unwichtige Fragen dürfen übersprungen werden; kennzeichne vorgeschlagene Standardwerte ausdrücklich.
+
+Deine erste Antwort enthält nur eine kurze Einführung und die Fragen zu Reiseziel, Reisezeitraum und Reisenden. Baue die Webseite, sobald die entscheidenden Angaben vorliegen. Optionale Angaben dürfen später im internen Bereich ergänzt werden.
+
+Erfasse schrittweise:
+
+Schritt A – Ziel und Zeitraum:
+- Länder, Regionen und gegebenenfalls mehrere Reiseetappen.
+- Beginn und Ende einschließlich An- und Rückreise; feste oder flexible Termine.
+- Anzahl Erwachsener und Kinder; Kinderalter nur, soweit für die Planung erforderlich.
+- Zeitzone der Planung und gegebenenfalls abweichende Ortszeiten.
+
+Schritt B – Anreise und Mobilität:
+- Verkehrsmittel für Anreise und vor Ort; Kombinationen wie Flug plus Mietwagen.
+- Start- und Rückkehrort, vorhandene Tickets, Flug- oder Zugzeiten.
+- Gewünschte Zwischenstopps, maximale Fahrzeiten, Pausen, Maut-/Fährpräferenzen.
+- Bei Bedarf Fahrzeug, Ladebedarf, ÖPNV-Nutzung oder besondere Mobilitätsanforderungen.
+
+Schritt C – Unterkünfte und feste Termine:
+- Unterkünfte je Etappe, Adresse, An- und Abreisedatum; bereits gebucht oder noch gesucht.
+- Vorhandene Buchungen, Besichtigungen und Veranstaltungen mit verbindlichen Zeiten.
+- Links oder Dokumente, aus denen ich Buchungsinformationen übernehmen lassen möchte.
+- Gästekarten, Rabattkarten, enthaltene Leistungen und sonstige Bindungen.
+- Welche dieser Informationen in der allgemeinen Ansicht erscheinen dürfen.
+
+Schritt D – Interessen und Rahmenbedingungen:
+- Reisecharakter: Natur, Wandern, Kultur, Städte, Strand, Wellness, Kulinarik oder Mischung.
+- Gewünschtes Tagespensum, Ruhetage, maximale Weglänge, Höhenmeter und Fahrzeiten.
+- Budget, Restaurantvorlieben, Unverträglichkeiten und Barrierefreiheit, soweit relevant.
+- Wunschziele, ausgeschlossene Aktivitäten, besondere Anlässe und mitreisende Tiere.
+- Bereits vorhandene Planung oder freie Neuplanung.
+
+Schritt E – Sprache und Bedienumfang:
+- Einsprachig oder mehrsprachig; Hauptsprache und weitere Sprachen.
+- Frage ausdrücklich nach dem Sprachmodus. Biete zwei Möglichkeiten:
+  A: Alle angegebenen Sprachen vollständig bedienbar, einschließlich PIN-Anmeldung, internem Bereich, Planung, Tagebuchbearbeitung, Bildverwaltung und Einstellungen. Dies ist der Standard.
+  B: Nur die Hauptsprache vollständig bedienbar; zusätzliche Sprachen als statische, ausschließlich lesbare Informationsseiten für Familie, Freunde oder andere Leser, ohne internen Bereich.
+- Falls verschiedene weitere Sprachen unterschiedlichen Zwecken dienen, darf ich den Modus pro Sprache festlegen. Ohne abweichende Auswahl gilt für jede angegebene Sprache Modus A.
+- Gewünschte Sprachversionen innerhalb derselben Webseite oder unter getrennten Adressen. Die Wahl der Adresse bestimmt nicht den Bedienumfang.
+- Übersetzung der Reiseinformationen und optional der Tagebucheinträge; Umgang mit eigenen Texten: Original bewahren, Übersetzung zusätzlich anzeigen.
+- Für statische Informationsseiten: Welche freigegebenen Inhalte dürfen erscheinen? Wann und wie oft sollen sie aus dem Stand der Hauptsprache übersetzt und veröffentlicht werden? Erfrage Uhrzeit, Intervall, Zeitzone sowie Beginn und Ende, beispielsweise täglich nachts.
+- Erfrage, ob nach Reiseende weitere Tagebucheinträge noch automatisch in die statischen Sprachseiten übernommen werden sollen.
+
+Schritt F – Gestaltung und Funktionsumfang:
+- Erfrage gewünschte Stimmung und Darstellungsart, etwa sachlich, ruhig, naturbezogen oder als bildorientiertes Reisemagazin.
+- Frage, ob eine zusätzliche Referenz vorhanden ist. „Keine Referenz“ ist eine vollständige, zulässige Antwort; entwickle dann die Gestaltung anhand des hier beschriebenen Grundaufbaus.
+- Der Frontend-Designer entwickelt daraus einen zum Reiseziel passenden Entwurf. Eine Quelle oder ein Screenshot muss nicht eigens beschafft werden, um fortfahren zu können.
+- Frage nach optionalen Funktionen, etwa Kostenübersicht, Packliste oder Druckexport.
+
+Schritt G – Zugriff und Veröffentlichung:
+- Wer darf Planung und Tagebuch lesen: nur ich, ausgewählte Personen oder öffentlich?
+- Darf die allgemeine Reiseansicht ohne Anmeldung über einen Link erreichbar sein?
+- Interner Bearbeitungsbereich immer mit echter PIN-Prüfung.
+- Welche Buchungs-, Personen- und Tagebuchinformationen ausschließlich intern bleiben.
+- Gewünschte Veröffentlichung, Adresse und gegebenenfalls eigene Domain.
+- Die PIN wird über eine geeignete geschützte Einrichtung gesetzt; nicht als Klartext in einen öffentlichen Prompt, Quellcode oder Bericht schreiben.
+
+Schritt H – Automatismen:
+- Wetterabruf: gewünschtes Intervall, Wetterorte und Vorhersageumfang.
+- Quellenprüfung: Öffnungszeiten, Preise, Sperrungen, Veranstaltungen, Verkehr und wichtige Links.
+- Beginn, Ende und Zeitzone jedes Jobs; Verhalten nach dem Reiseende separat für Wetter, Quellenprüfung, Sicherungen und Übersetzungen.
+- Sicherungen und gegebenenfalls Übersetzungsabgleich. Für statische Sprachseiten gehört die tatsächlich ausgeführte Übersetzung und Veröffentlichung nach dem in Schritt E festgelegten Zeitplan dazu.
+- Wo Änderungshinweise angezeigt werden; externe Benachrichtigungen nur bei entsprechendem Auftrag.
+
+Standardverhalten für Neuplanungen, im Wizard bei Bedarf änderbar:
+Wetter und Reiseinformationen automatisch aktualisieren. Änderungen der Tagesplanung nur als konkreten Vorschlag vorbereiten und erst nach meiner Freigabe übernehmen. Dieser Standard gilt, solange ich nicht ausdrücklich einen anderen Modus wünsche.
+
+Vorschläge für den Wizard, keine ungefragten Festlegungen:
+- Wetter während der Reise stündlich; davor einmal täglich.
+- Prüfung relevanter Reiseinformationen täglich am Morgen.
+- Tägliche Sicherung vor einem Übersetzungsabgleich.
+- Reisebezogene Aktualisierungen nach Reiseende beenden; Tagebuch zugänglich lassen.
+Lass mich diese Intervalle und Laufzeiten anpassen.
+
+Schritt I – Zusammenführung:
+Zeige die erfassten Angaben, offene Punkte und vorgeschlagenen Standardwerte übersichtlich. Löse nur die Lücken durch Rückfragen, die eine korrekte Umsetzung verhindern. Setze anschließend den Auftrag vollständig um.
+
+2. DESIGN, FRONTEND-DESIGNER UND BILDREGELN
+
+Arbeite mit einer unterstützenden Fachrolle „Frontend-Designer“. Wenn die Umgebung mehrere Agenten unterstützt, beauftrage dafür einen eigenen Agenten. Andernfalls übernimm diese Rolle selbst und kennzeichne nicht fiktiv eine Zusammenarbeit als tatsächlich erfolgt. Die Gestaltung bleibt Bestandteil der vollständigen Umsetzung.
+
+Aufgabe des Frontend-Designers:
+- Aus Reiseziel, Reisecharakter und Wizard-Antworten ein eigenständiges, passendes Gestaltungskonzept entwickeln.
+- Farbpalette, Typografie, Abstände, Bildausschnitte, Karten, Tagesdarstellung und Navigation als konsistentes System definieren.
+- Regionale Eigenheiten anhand realer Ortsbilder und nachvollziehbarer Informationen berücksichtigen, ohne stereotype Motive oder erfundene Ortsdarstellungen.
+- Startseite, Tagesplanung, Tagebuch und internen Bereich für Desktop und Smartphone gestalten.
+- Lesbarkeit, Kontraste, Tastaturbedienung und die Bedienbarkeit aller Formulare und Modale prüfen.
+- Das Konzept in das tatsächliche Frontend einbringen und die fertig umgesetzten Seiten visuell prüfen. Ein Moodboard allein erfüllt den Auftrag nicht.
+
+Generischer Grundaufbau ohne externe Vorlage:
+- Kopfzeile mit Reisetitel, Zeitraum, Hauptnavigation und gegebenenfalls Sprachwechsel. Der Zugang zum internen Bereich erscheint in vollständig bedienbaren Sprachversionen; statische Informationsseiten erhalten keinen internen Bereich.
+- Startseite mit großem echten Ortsfoto, kurzer Reiseeinführung, Übersichtskarte, Etappen und den wichtigsten Reiseinformationen.
+- Chronologische Tagesübersicht als gut lesbare Zeitleiste oder Tageskarten mit Datum, Tagesziel, Bild, Kurzbeschreibung und Status; während der Reise den aktuellen Tag leicht erreichbar machen.
+- Tagesdetail mit Hero-Bild, Datum, Titel und Einführung; danach Ablauf, Hauptziele, Alternativen, Karte, Anreise beziehungsweise Transfers, Wetter und praktische Hinweise.
+- Orts- und Aktivitätskarten mit echten Fotos, eigener Kurzbeschreibung, Besonderheiten, Besuchsdauer, Öffnungszeiten, Kosten, Buchungs- und Navigationslinks.
+- Reisewissen als klar gegliederte Kapitel: Regionen und Orte, Hintergrund, praktische Informationen und die zur Reise passenden Themen.
+- Tagebuch mit Tagesüberschrift, eigenen Bildern und persönlichem Tagesbericht, danach tatsächlich besuchten Aktivitäten.
+- Interner Bereich als übersichtliche Verwaltungsansicht mit deutlich erkennbaren Speicher-, Bearbeitungs- und Freigabeaktionen.
+
+Das Erscheinungsbild soll die Lesbarkeit eines Reiseführers mit der Bedienung einer Webseite verbinden: klare Überschriftenhierarchie, kurze Einführungen, gut gegliederte Hintergrundtexte, praktische Infokästen und konsistente Karten. Verwende eine ruhige Grundfläche, ausreichend Abstand, wenige funktionale Akzentfarben und eine zum Ziel passende Bildauswahl. Der Frontend-Designer konkretisiert dies individuell; verwende nicht für jedes Reiseziel dieselbe austauschbare Gestaltung.
+
+Sorge durchgehend für:
+- Gut sichtbare Navigation zu Planung, Tagebuch, Wetter, Reisewissen und internem Bereich.
+- Lesbare Kontraste, insbesondere auf Buttons, Karten und im internen Bereich.
+- Smartphone-Bedienung ohne abgeschnittene Tabellen oder horizontales Seiten-Scrollen.
+- Große Bedienelemente, übersichtliche Formulare und erreichbare Aktionsbuttons.
+- Bei mehreren Sprachen Wechsel auf dieselbe freigegebene Seite und denselben Reisetag, soweit im gewählten Sprachmodus vorhanden. Der interne Bereich lässt nur den Wechsel zu vollständig bedienbaren Sprachen zu.
+
+Wenn eine zusätzliche Referenz angegeben wird, prüfe nur die tatsächlich zugänglichen Inhalte. Nutze sie zur Orientierung und behaupte keine geprüfte oder exakte Übernahme ohne entsprechende Grundlage. Ist sie nicht verfügbar, arbeite mit dem eigenständigen Grundaufbau weiter; frage nur nach, wenn ausdrücklich eine genaue Nachbildung gewünscht wurde.
+
+VERBINDLICHE REGELN FÜR HERO-BILDER
+
+Hero-Bilder der Reiseübersicht, Etappen und Tagesplanung müssen echte Fotografien der jeweils dargestellten Region beziehungsweise tatsächlich geplanten Orte sein. Recherchiere dafür im Internet nach Bildern der konkreten Tagesziele. Ein nur ähnlich aussehender Ort oder ein allgemeines Landschaftsbild einer anderen Region ist kein geeigneter Ersatz.
+
+Priorität:
+1. Ein von mir ausdrücklich festgelegtes eigenes Hero-Bild hat immer Vorrang.
+2. Geeignete eigene, dem Tag oder Ort zugeordnete Fotos haben Vorrang vor Internetbildern. Bewahre meine Auswahl; bei mehreren gleichwertigen eigenen Bildern kann ich das Hero-Bild bestimmen.
+3. Fehlen geeignete eigene Bilder, verwende eine im Internet recherchierte echte Fotografie eines Hauptziels des Tages oder der dargestellten Etappe.
+
+Verwende keine KI-generierten, generativ ergänzten oder aus verschiedenen Orten zusammengesetzten Hero-Bilder, auch nicht als vorläufigen Ersatz. Normales Zuschneiden und Skalieren darf den Aufnahmeort und die dargestellte Situation nicht verfälschen.
+
+Prüfe für jedes recherchierte Bild, ob es tatsächlich den angegebenen Ort zeigt und zur geplanten Aktivität passt. Dokumentiere Ursprungsseite, Bildquelle, erforderliche Urheberangaben und Nutzungsbedingungen; verwende nur Bilder mit geeigneter Nutzungsmöglichkeit. Sorge für zuverlässige Auslieferung, passende Auflösung und beschreibende Alternativtexte.
+
+Ist kein passendes nutzbares Foto verfügbar, verwende vorläufig eine neutrale Fläche mit einem Hinweis auf das fehlende Foto und frage bei Bedarf nach einem eigenen Bild. Erfinde oder generiere kein Ersatzfoto und behaupte nicht, ein unpassendes Bild zeige den Ort.
+
+Nach einer freigegebenen Neuplanung wähle ein zum neuen Tagesziel passendes echtes Foto. Ein eigenes Hero-Bild wird dabei niemals automatisch überschrieben. Im Tagebuch bleiben persönliche Fotos persönliche Aufnahmen; ein recherchiertes Ortsfoto darf nicht als eigenes Reiseerlebnis erscheinen.
+
+3. SEITEN UND REISESTRUKTUR
+
+Implementiere mindestens:
+- Startseite mit Reiseüberblick und Etappen.
+- Tagesplanung und einzelne Tagesseiten.
+- Aktivitätenübersicht mit Suche, Regions-, Datums- und Statusfiltern.
+- Karten und Routen.
+- Unterkünfte und Reiseorganisation, mit angemessener Sichtbarkeit persönlicher Angaben.
+- Wetterseite.
+- Reisewissen.
+- Reisetagebuch mit Tages- und Aktivitätsansichten.
+- PIN-geschützten internen Bereich.
+- Eigene Ziele zur Ergänzung durch mich.
+
+Diese Funktionen bilden die vollständige Anwendung. Vollständig bedienbare Sprachversionen bieten denselben Funktionsumfang. Statische Informationsseiten enthalten ausschließlich die in Abschnitt 11 festgelegten freigegebenen Leseansichten.
+
+Passe das Reisewissen an die Länder und Reiseart an. Mögliche Unterseiten: Allgemeines, Verkehr und Mobilität, Essen und Trinken, Mitbringsel, Gästekarten und Sprachhilfe. Verwende ausschließlich Länderinformationen, die zu dieser Reise passen.
+
+Alle Ansichten beziehen ihre Informationen aus derselben verlässlichen Datenbasis. Aktivitäten, Kartenmarker und Tagebuchbezüge müssen eindeutig miteinander verknüpft sein.
+
+4. TAGESPLANUNG
+
+Plane zusammenhängende Tage anhand der Unterkunft der jeweiligen Etappe, vorhandener Buchungen, Interessen und Belastungsgrenzen. Jeder Tag erhält:
+- Datum, Titel, passende Beschreibung und ein echtes Tagesfoto gemäß den verbindlichen Bildregeln in Abschnitt 2.
+- Hauptaktivität oder sinnvoll geordnete Hauptaktivitäten.
+- Realistische Reihenfolge mit Dauer, Wegen, Transfers und Pausen.
+- Geeignete Alternativen bei schlechtem Wetter oder geringerem Tagespensum.
+- Wetterbezug, relevante Öffnungszeiten, Eintritt, Reservierungsbedarf und direkte Links.
+- Karte mit Unterkunft beziehungsweise Startpunkt, Zielen, Alternativen und relevanten Parkplätzen.
+- Bei passendem Reiseprofil zwei bis drei passende Restaurantvorschläge am Ziel oder auf dem Rückweg.
+
+Berücksichtige Anreise, Unterkunftswechsel, Ruhetage und Rückreise ausdrücklich. Plane keine normalen Ausflugstage zusätzlich zu ausgelasteten Reisetagen.
+
+Restaurantvorschläge erhalten eine kurze Begründung, Preisrahmen und vorhandene Bewertung mit Quelle und Prüfdatum. Erfinde weder Bewertungen noch Preise.
+
+Für Wanderungen: tatsächlicher Startpunkt, Parkplatz, Wegmarkierung, Strecke, Schwierigkeit, Höhenmeter, Dauer und offizielle Routenbeschreibung. Berücksichtige Zufahrtsverbote und nötige Busverbindungen. Verwende vorhandene GPX-Daten und Höhenprofile nur mit nachvollziehbarer Herkunft.
+
+5. KARTEN, ROUTEN UND NAVIGATION
+
+Zeige passende Karten und Navigationslinks für die gewählte Reiseart:
+- Tagesroute mit Unterkunft oder Startpunkt und sinnvoller Reihenfolge.
+- An- und Rückreise mit gewünschten Zwischenstopps und Pausen.
+- Geeignete Parkplätze, Haltestellen, Flughäfen oder Fähranleger.
+- Unterschiedliche Marker für Hauptziele, Alternativen, Restaurants und Unterkunft.
+- Routen, die zur tatsächlich erlaubten Fortbewegung passen.
+
+Prüfe Parkmöglichkeiten, Zufahrtsregeln und ÖPNV für das jeweilige Datum. Bevorzuge auf Wunsch kostenlose Parkplätze, ohne große Umwege oder ungeeignete Startpunkte zu erzeugen.
+
+Nutze geprüfte Deeplinks zu konkreten Orten, Tickets und offiziellen Routen. Eine Fahrzeug-Navi-Integration, etwa „an Fahrzeugnavigation senden“, darf nur erscheinen, wenn eine unterstützte Schnittstelle vorhanden ist und funktioniert. Andernfalls verwende funktionierende Navigationslinks.
+
+6. AKTIVITÄTEN UND DYNAMISCHE PLANUNG
+
+Verwalte Aktivitäten mit stabilen Kennungen und mindestens:
+- Name, Region, Koordinaten und Quellen.
+- Hauptziel, Alternative oder noch nicht zugeordnet.
+- Geplantes Datum und Reihenfolge.
+- Status: geplant, besucht, ausgelassen oder nicht mehr gewünscht.
+- Tatsächliches Besuchsdatum.
+- Öffnungszeiten, Kosten, Buchungsbedarf und Wetterabhängigkeit.
+- Notizen, Bilder und Bezug zum Tagebuch.
+
+Ich kann eigene Ziele mit Namen und Link ergänzen und Angaben später vervollständigen. Ziele müssen tatsächlich in der zentralen Datenhaltung gespeichert sein.
+
+Bei einem von mir ausgelösten Neuplanungsvorschlag:
+- Nur zukünftige Tage umplanen; den heutigen Tag nur auf ausdrücklichen Wunsch.
+- Besuchte Aktivitäten, vergangene Tage, feste Buchungen und gesperrte Planungen bewahren.
+- Noch geplante, nicht zugeordnete Aktivitäten innerhalb ihrer passenden Reiseetappe berücksichtigen.
+- Nur räumlich passende Ergänzungen zu einem Tagesziel vorschlagen. Verwende als konfigurierbaren Vorschlag maximal 15 km Entfernung; dokumentiere die Berechnungsmethode und prüfe zusätzlich die tatsächlichen Wegezeiten.
+- Nicht sinnvoll einordenbare Aktivitäten mit Begründung anzeigen und um manuelle Zuordnung bitten.
+- Überfüllte Tage vermeiden und Ruhetage bewahren.
+- Vorher/Nachher mit betroffenen Tagen, Begründung und Konflikten anzeigen.
+
+Der Button „Neue Reiseplanung erstellen“ startet einen echten Auftrag oder einen gespeicherten, bearbeitbaren Vorschlag. Er darf nicht lediglich eine lokale Zufallsverteilung auslösen oder Erfolg ohne Verarbeitung melden.
+
+Nach meiner Freigabe aktualisiere den gesamten betroffenen Tag: Hauptziele, Alternativen, Titel, Begleittexte, Hero-Bild, Wetterbezug, Karten, Marker, Routen, Parkplätze, Restaurants und Zeitablauf. Es dürfen keine Reste der vorherigen Planung zurückbleiben. Eigene Hero-Bilder behalten immer Vorrang; alle automatisch ausgewählten Ersatzbilder müssen die Regeln für echte Ortsfotografien aus Abschnitt 2 erfüllen.
+
+Bei verkürztem Reisezeitraum passe alle betroffenen Ansichten an. Vorhandene Tagebucheinträge bleiben erhalten; entferne sie nicht als Nebenwirkung einer Planänderung.
+
+7. REISETAGEBUCH
+
+Das Tagebuch dokumentiert tatsächliche Erlebnisse. Erfinde keine Besuche, Erlebnistexte, Bilder oder rückwirkenden Statusänderungen.
+
+Pro Tag:
+- Eigene Tagesnotiz, mehrere Bilder und Bildunterschriften.
+- Eigenes Hero-Bild.
+- Tatsächlich besuchte Aktivitäten mit ihren Notizen und Bildern.
+- Sichtbarer Unterschied zwischen ursprünglich geplant und tatsächlich besucht.
+- Gespeicherter Wetterstand mit korrekter Kennzeichnung.
+
+Seitenaufbau: zuerst Tagesbilder und Tagesnotiz; darunter zugehörige Aktivitäten mit Bildern und Notizen. Unbesuchte Planungsziele dürfen nicht als erlebt erscheinen.
+
+Bilder erhalten eine Lightbox mit Vergrößerung, Wischbedienung, Vor/Zurück und gut sichtbarem Schließen. Das funktioniert auch bei genau einem Bild. Stelle Bildreihenfolge und Untertitel bereit.
+
+In vollständig bedienbaren Sprachversionen lassen sich Status und „Besucht am“ nach PIN-Anmeldung direkt aus der Tagebuchansicht bearbeiten. Tages- und Aktivitätsnotizen unterstützen mehrere Bilder. Zeige beim Speichern und Hochladen tatsächlichen Erfolg oder einen verständlichen Fehler an. Statische Sprachseiten zeigen die freigegebenen Tagebucheinträge nur zum Lesen; sie besitzen keine Bearbeitungs- oder Uploadfunktionen.
+
+8. INTERNER BEREICH UND PIN
+
+Der interne Bereich ist in der Hauptsprache und allen weiteren vollständig bedienbaren Sprachversionen über einen sichtbaren Link in der Kopfzeile erreichbar. Übersetze seine gesamte Bedienoberfläche in diese Sprachen. Statische Informationsseiten enthalten weder einen internen Bereich noch dessen Bedienelemente oder private Inhalte.
+
+Der interne Bereich umfasst:
+- Bearbeitung von Planung, Aktivitäten, Status, Besuchsdatum und Ruhetagen.
+- Eigene Ziele, Tages- und Aktivitätsnotizen, Bilder und Hero-Auswahl.
+- Unterkünfte und vertrauliche Buchungsinformationen.
+- Neuplanungsvorschläge mit Freigabe oder Ablehnung.
+- Einstellungen für Sprache, Sichtbarkeit, Wetter und Automatismen.
+- Laufstatus, Fehler, Änderungsverlauf sowie Sicherung und Wiederherstellung.
+- Dynamischen Tagesstand ausschließlich intern.
+
+Setze eine echte serverseitige PIN-Prüfung um. Schütze Schreibzugriffe und private Lesezugriffe auf allen betreffenden Endpunkten. Verwende sichere PIN-Hash-Verarbeitung, begrenzte Fehlversuche, zeitlich begrenzte Sitzungen und Abmeldung. Die PIN gehört nicht in das Frontend oder öffentlich zugängliche Dateien. Ein bloß ausgeblendetes Menü ist keine Zugriffssicherung.
+
+Private Medien und Buchungsdokumente benötigen denselben Zugriffsschutz; öffentliche Dateilinks dürfen diesen nicht umgehen. Lege im Wizard die konkrete Sichtbarkeit fest. Ein öffentlich erreichbarer Link ohne Verzeichnislisting ersetzt keinen Zugriffsschutz.
+
+Die PIN-Verwaltung erfolgt über eine geschützte Einrichtung. Verwende keine Zugangsdaten aus anderen Reisen oder Projekten.
+
+9. WETTER MIT NACHVOLLZIEHBAREN DATEN
+
+Verwende verfügbare, verifizierbare Wetterquellen für die Region, vorzugsweise zuständige Wetterdienste oder geeignete dokumentierte Anbieter. Daten müssen aus einem tatsächlichen Abruf stammen.
+
+Zeige:
+- Wetter für Unterkünfte und geplante Tagesziele.
+- Temperatur, Niederschlag und dessen Wahrscheinlichkeit, Wind sowie relevante Warnungen, soweit verfügbar.
+- Quelle, Ort beziehungsweise Koordinaten, Gültigkeitszeitraum und Zeitzone.
+- „Stand der Wetterdaten“ als Zeitpunkt des letzten erfolgreichen Abrufs.
+- Erkennbare Kennzeichnung veralteter oder fehlender Daten.
+- Innen-/Außenempfehlungen mit nachvollziehbarer Begründung.
+
+Trenne Messwerte, Vorhersagen und längerfristige Trends. Zeige keine präzise Drei-Wochen-Prognose, wenn die Quelle diesen Zeitraum nicht zuverlässig abdeckt. Für den verbleibenden Zeitraum darf eine klar gekennzeichnete klimatologische Orientierung erscheinen.
+
+Wettericons und Niederschlagsart müssen zu den gelieferten Daten passen. Leite Schnee oder Regen nicht allein aus einem einzelnen Temperaturwert ab. Bei widersprüchlichen Quellen kennzeichne die Unsicherheit.
+
+Speichere den für die Tagesplanung verwendeten Wetterstand für das Tagebuch. Eine gespeicherte Vorhersage ist kein Nachweis des tatsächlich eingetretenen Wetters; kennzeichne sie entsprechend. Historische Messdaten können zusätzlich aus einer passenden Quelle übernommen werden.
+
+Bei Abruffehlern, abgelehnten Zugriffen oder fehlenden Berechtigungen: keine erfundenen Ersatzdaten. Bewahre vorhandene gültige Daten mit ihrem alten Zeitstempel und zeige den Fehler intern. Nutze eine verfügbare Ersatzquelle nur transparent.
+
+10. AUTOMATISMEN UND ÄNDERUNGSPRÜFUNG
+
+Richte die im Wizard festgelegten Jobs tatsächlich ein. Sie müssen auch laufen können, wenn niemand die Webseite oder PWA geöffnet hat. Verwende eine verfügbare serverseitige oder externe Zeitplanung; eine Browser-Aktualisierung allein erfüllt diesen Auftrag nicht.
+
+A – Wetter:
+Daten im festgelegten Intervall abrufen, prüfen und speichern. Vollständig bedienbare Sprachversionen nutzen den gemeinsamen aktuellen Wetterstand. Statische Sprachseiten übernehmen den Wetterstand erst mit ihrer nächsten geplanten Veröffentlichung und zeigen dessen tatsächlichen Datenzeitpunkt sowie ihren Veröffentlichungsstand. Aktualisierte Daten dürfen Hinweise oder Neuplanungsvorschläge erzeugen, aber keinen Tagesplan eigenmächtig verändern.
+
+B – Reiseinformationen:
+Relevante Quellen für kommende Aktivitäten auf geänderte Öffnungszeiten, Ruhetage, Preise, Führungen, Tickets, Sperrungen, Veranstaltungen und Transportbedingungen prüfen. Berücksichtige Reisezeitraum, Saison und Feiertage. Prüfe bei Links möglichst, ob das konkrete Ziel noch erreichbar und inhaltlich passend ist.
+
+Speichere Quelle, Prüfzeitpunkt und die relevante Änderung. Unterscheide belegte Änderung, unveränderte Daten und fehlgeschlagene Prüfung. Eine nicht erreichbare Webseite beweist keine Schließung.
+
+C – Änderungsvorschläge:
+Stelle im internen Bereich dar, was sich geändert hat, welche Tage betroffen sind und welche Alternative sinnvoll wäre. Übernimm Änderungen der Tagesplanung ausschließlich nach meiner Freigabe. Feste Buchungen, tatsächliche Besuche und eigene Texte bleiben geschützt.
+
+D – Sicherungen:
+Sichere Planungsdaten, Tagebuch, Medienbezüge, Einstellungen und gegebenenfalls Sprachstände. Stelle eine tatsächlich nutzbare Wiederherstellung bereit. Protokolliere Umfang und Ergebnis. Sicherungsrhythmus und Aufbewahrung sind konfigurierbar.
+
+E – Übersetzungen und statische Veröffentlichungen:
+Für vollständig bedienbare Sprachversionen: gemeinsam gespeicherte Änderungen aus jeder bedienbaren Sprache berücksichtigen, Texte nach dem festgelegten Verfahren abgleichen und Originalsprache sowie manuell gepflegte Übersetzungen bewahren. Status, Datum, Bildauswahl und Aktivitätsbezüge müssen auf derselben Datenbasis bleiben.
+
+Für statische Informationsseiten: zum festgelegten Zeitpunkt einen konsistenten Stand der freigegebenen Inhalte der Hauptsprache erfassen, in die Zielsprachen übersetzen und als fertige statische Leseansichten veröffentlichen. Übernimm freigegebene Tagesplanung, Reisewissen, Wetterstand und gegebenenfalls Tagebuch einschließlich eigener Hero-Bilder, Fotos und Bildunterschriften.
+
+Veröffentliche nur die für diese Leser bestimmten Inhalte. Private Buchungsdaten, interne Notizen, Zugangsdaten und Bearbeitungsfunktionen dürfen nicht in den erzeugten Dateien enthalten sein. Zeige den Zeitpunkt der letzten erfolgreichen Übersetzung beziehungsweise Veröffentlichung mit Zeitzone und den zugrunde liegenden Inhaltsstand an.
+
+Ersetze die vorherige statische Fassung erst nach erfolgreicher Erzeugung und Prüfung. Bei Fehlern bleibt die letzte erfolgreich veröffentlichte Fassung mit ihrem tatsächlichen Zeitstempel erhalten; Fehler erscheinen intern. Biete zusätzlich ein manuelles Auslösen der Übersetzung und Veröffentlichung in der vollständigen Anwendung an. Erzeuge keine auseinanderlaufenden Aktivitätslisten und überschreibe keine manuell gepflegten Übersetzungen ungefragt.
+
+Alle Jobs haben:
+- Eindeutigen Zweck, Intervall, Zeitzone sowie Beginn und Ende.
+- Anzeige des letzten Versuchs, letzten Erfolgs und nächsten geplanten Laufs.
+- Fehlerprotokoll und begrenzte Wiederholungen.
+- Schutz gegen doppelte Verarbeitung und paralleles Überschreiben.
+- Konfigurierbare Unterbrechung und manuelles Auslösen.
+- Möglichst gezielte Abrufe statt unnötiger wiederholter Vollrecherchen.
+
+Zeige einen Job nur dann als aktiv an, wenn er tatsächlich eingerichtet wurde. Fehlt eine erforderliche Schnittstelle, Berechtigung oder Laufzeitfunktion, benenne die konkrete Einschränkung und die nötige Ergänzung. Eine Attrappe oder ein bloßer Automatisierungstext ersetzt keinen eingerichteten Job.
+
+Dieser Prompt beauftragt eine neue Reise. Falls andere Reiseprojekte existieren, dürfen deren Zeitpläne nicht verändert werden.
+
+11. MEHRSPRACHIGKEIT: BEDIENBARE SPRACHVERSIONEN ODER STATISCHE INFORMATIONSSEITEN
+
+STANDARD – MODUS A: ALLE SPRACHEN VOLLSTÄNDIG BEDIENBAR
+
+Ohne ausdrücklich andere Auswahl sind alle angegebenen Sprachen vollständig nutzbar. Beispielsweise können zwei Reisende die Anwendung auf Deutsch beziehungsweise Türkisch bedienen und dieselbe Reise gemeinsam pflegen.
+
+Übersetze die gesamte Bedienoberfläche: Navigation, Formulare, PIN-Anmeldung, internen Bereich, Tagebuchbearbeitung, Bildverwaltung, Status und Besuchsdatum, Neuplanung und Freigabe, Einstellungen, Automatismen, Sicherung und Wiederherstellung sowie Erfolgs- und Fehlermeldungen. Keine Funktion darf allein wegen der ausgewählten Sprache fehlen.
+
+Verwende gemeinsame Reisedaten mit getrennten Sprachtexten. Datum, Status, Besuchsdatum, Bilder, Hero-Auswahl, Karten, Aktivitäten und Buchungen beziehen sich auf dieselben Einträge. Eine Änderung in einer bedienbaren Sprache wird auf der gemeinsamen Datenbasis gespeichert und ist in den anderen bedienbaren Sprachen entsprechend sichtbar; erzeuge keine unabhängigen Kopien der Reise.
+
+Eigene Texte dürfen in jeder bedienbaren Sprache eingegeben werden. Bewahre Originaltext und Originalsprache, zeige Übersetzungen zusätzlich an und schütze manuell gepflegte Übersetzungen vor automatischem Überschreiben. Wenn ein Übersetzungsabgleich nötig ist, berücksichtige Änderungen aus allen bedienbaren Sprachen und kennzeichne noch ausstehende Übersetzungen.
+
+Die Sprache ändert keine Zugriffsrechte. Der interne Bereich bleibt in jeder Sprache durch dieselbe wirksame Zugriffskontrolle geschützt.
+
+OPTION – MODUS B: HAUPTSPRACHE BEDIENBAR, WEITERE SPRACHEN STATISCH
+
+Die Hauptsprache enthält die vollständige Anwendung einschließlich internem Bereich. Die zusätzlichen Sprachen dienen der Information anderer Personen und bieten ausschließlich freigegebene Leseansichten.
+
+Erzeuge für diese Sprachen statische Seiten aus dem freigegebenen Inhaltsstand der Hauptsprache: Reiseüberblick, Tagesplanung, Ortsinformationen, Karten beziehungsweise Navigationslinks, Reisewissen, gespeicherter Wetterstand und optional Reisetagebuch. Sprache, Bildtexte und Beschriftungen werden passend übersetzt. Navigation, Bild-Lightbox und andere reine Anzeigefunktionen dürfen weiterhin funktionieren; statisch bedeutet, dass keine Reisedaten bearbeitet werden können.
+
+Diese Seiten enthalten keine PIN-Anmeldung, keinen internen Bereich, keine Bearbeitungsformulare, keine Uploads, keine Neuplanungsfreigaben und keine Verwaltungsfunktionen. Private Daten dürfen weder sichtbar noch im ausgelieferten Quelltext, in eingebetteten Daten oder ungeschützten Medien enthalten sein. Verlinke von statischen Sprachseiten nicht auf interne Ansichten.
+
+Übersetzung und Veröffentlichung laufen automatisch zum im Wizard festgelegten Zeitpunkt, beispielsweise einmal täglich nachts. Dies muss auch bei geschlossener Webseite funktionieren. Die statischen Fassungen sind veröffentlichte Momentaufnahmen und müssen nicht jede Änderung sofort übernehmen. Zeige ihren Aktualisierungsstand klar an; der Wetterzeitstempel bleibt vom Veröffentlichungszeitpunkt unterscheidbar.
+
+Die Zugriffs- und Veröffentlichungsregeln aus dem Wizard gelten auch für statische Sprachseiten. Eine statische Fassung ist nicht automatisch öffentlich.
+
+FÜR BEIDE MODI
+
+Bewahre Eigennamen und offizielle Ortsnamen sinnvoll. Stelle die Sprache jeder Seite korrekt ein. Fehlende Übersetzungen dürfen keine leeren Beschriftungen erzeugen; kennzeichne einen vorläufigen Text in der Hauptsprache bei Bedarf transparent.
+
+Ein Sprachwechsel soll auf dieselbe freigegebene Seite beziehungsweise denselben Reisetag führen. Aus dem internen Bereich ist nur ein Wechsel zu anderen vollständig bedienbaren Sprachen möglich; ein statischer Modus erhält keine interne Ansicht.
+
+Sprachversionen dürfen innerhalb einer Webseite oder unter getrennten Adressen liegen. Funktionale Gleichwertigkeit gilt für vollständig bedienbare Sprachversionen; statische Informationsseiten erhalten bewusst nur den vereinbarten Leseumfang. Bei einer ausdrücklich gewünschten Mischung halte pro Sprache fest, welcher Modus gilt.
+
+Zeige im internen Bereich die Sprachkonfiguration sowie bei statischen Versionen den letzten erfolgreichen Lauf, nächsten geplanten Lauf, Veröffentlichungsstand und aufgetretene Fehler an.
+
+12. PWA UND ZUVERLÄSSIGKEIT
+
+Erstelle eine tatsächlich installierbare PWA mit Manifest, passenden Icons und funktionierendem Update-Verhalten.
+
+Stelle wesentliche bereits geladene Reiseinformationen nach Möglichkeit offline bereit. Kennzeichne Offlinezustand und gespeicherten Stand. Private Daten dürfen nicht ungeschützt im öffentlichen Cache landen.
+
+Wenn Offline-Bearbeitung angeboten wird, müssen vorgemerkte Änderungen später zuverlässig synchronisieren und Konflikte sichtbar lösen. Andernfalls kennzeichne die Bearbeitung als online erforderlich.
+
+Im Smartphone- und PWA-Modus:
+- Modale Dialoge müssen vollständig bedienbar bleiben.
+- Bei der Neuplanung kurze Texte und dauerhaft erreichbare Aktionsbuttons.
+- Keine wichtigen Buttons unter einem zu langen Erklärungstext oder außerhalb des sichtbaren Bereichs.
+- Berücksichtige Bildschirmtastatur, kleine Displays und sichere Bildschirmränder.
+
+Reisedaten und Fotos werden dauerhaft gespeichert. Lokaler Browserspeicher allein reicht für Tagebuch und geräteübergreifende Nutzung nicht aus.
+
+13. FAKTEN, QUELLEN UND DATENSCHUTZ
+
+Recherchiere aktuelle Reiseinformationen mit geeigneten Quellen. Bevorzuge offizielle Seiten von Attraktionen, Tourismusstellen, Verkehrsbetrieben, Wetterdiensten und Behörden.
+
+Kennzeichne Schätzungen und noch offene Angaben. Erfinde keine Öffnungszeiten, Preise, Verbindungen, Bewertungen, Buchungsbedingungen, historischen Wetterwerte oder Fähigkeiten von Integrationen.
+
+Buchungsnummern, persönliche Kontaktdaten, Dokumente und genaue Privatadressen bleiben entsprechend der gewählten Sichtbarkeit geschützt. Verwende nur die für die Funktionen erforderlichen Daten. Speichere API-Schlüssel und sonstige Geheimnisse geschützt auf dem Server.
+
+Falls eine externe Referenz oder ein anderes Reiseprojekt angegeben wird, nutze daraus nur die ausdrücklich gewünschten und zulässig verwendbaren Elemente. Persönliche Inhalte anderer Reisen oder Personen werden nicht zu Beispieldaten dieser Reise.
+
+14. PRÜFUNG UND ÜBERGABE
+
+Prüfe vor der Übergabe die wesentlichen Funktionen tatsächlich:
+- Alle Tage, Unterkunftswechsel und Routen stimmen mit dem Reisezeitraum überein.
+- Karten, Parkplätze, Restaurants und Begleittexte passen zu den geplanten Zielen.
+- Aktivitäten sind zentral gespeichert und überall konsistent.
+- Eigene Bilder und Tagebucheinträge überstehen Planänderungen; eigene Hero-Bilder haben immer Vorrang.
+- Alle recherchierten Hero-Bilder sind echte, überprüfte Fotografien der dargestellten Orte; Quellen und Nutzungsbedingungen sind dokumentiert.
+- Die Webseite funktioniert ohne frühere Reisewebseite oder Buchvorlage und besitzt eine zum Ziel passende, konsistente Gestaltung.
+- PIN-Schutz blockiert unberechtigte Zugriffe auch über direkte Endpunkte.
+- Notizen, Statusänderungen, Fotos, Lightbox und Speichern funktionieren.
+- Smartphone, PWA, Modale und Sprachwechsel sind entsprechend dem gewählten Sprachmodus bedienbar.
+- Standardmäßig besitzen alle angegebenen Sprachen den vollständigen Funktionsumfang einschließlich übersetztem PIN-Zugang und internem Bereich; Änderungen werden gemeinsam gespeichert.
+- Falls statische Sprachseiten gewählt wurden: keine internen Inhalte oder Schreibfunktionen, nur freigegebene Daten und Medien, funktionierende Leseansichten.
+- Zeitgesteuerte Übersetzung und Veröffentlichung statischer Fassungen funktionieren; Inhaltsstand, Veröffentlichungszeit und Wetterzeitstempel sind korrekt angegeben.
+- Wetterquelle, Zeitstempel und Fehlerzustände werden korrekt angezeigt.
+- Automatismen sind tatsächlich eingerichtet, ihre Laufdaten nachvollziehbar.
+- Links und Veröffentlichungsadresse funktionieren.
+
+Nutze geeignete Funktionsprüfungen und schaue Dir die relevanten Seiten in Desktop- und Smartphone-Darstellung an. Behaupte keine erfolgreiche Prüfung, die nicht durchgeführt wurde.
+
+Übergebe:
+- Die fertige Webseite mit dem vereinbarten Zugriff und Veröffentlichungsstatus.
+- Den Link und eine kurze Bedienanleitung für Planung und Tagebuch.
+- Die aktive Konfiguration der Automatismen einschließlich Laufzeiten und Zeitzone.
+- Den Sprachmodus pro Sprache sowie bei statischen Sprachseiten deren Adressen, freigegebenen Inhalt und Übersetzungs- und Veröffentlichungszeitplan.
+- Klar benannte verbleibende Einschränkungen oder noch erforderliche Angaben.
+- Hinweise zur geschützten PIN-Einrichtung sowie zur Sicherung und Wiederherstellung.
+
+Setze alle vereinbarten Funktionen um. Arbeite die Umsetzung und Prüfung vollständig ab; erledige bei fehlenden Angaben bereits die davon unabhängigen Teile.
+
+START JETZT:
+Beginne mit Schritt A des Wizards. Frage nach Reiseziel, Reisezeitraum und Anzahl der Reisenden, soweit diese Informationen noch fehlen.
+
+===================== ENDE DES PROMPTS =====================

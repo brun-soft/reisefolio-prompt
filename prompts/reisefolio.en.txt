@@ -1,0 +1,435 @@
+REISEFOLIO – ENGLISH TRANSLATION OF THE GERMAN ORIGINAL
+Project: https://github.com/brun-soft/reisefolio-prompt
+Project initiated by Michael (brun-soft); developed with ChatGPT. Translation created with ChatGPT.
+Supported use: ChatGPT only, with at least a Plus subscription and the necessary website, research, storage and background-task capabilities. The prompt alone cannot replace unavailable services.
+Licence: CC BY-NC-SA 4.0 – https://creativecommons.org/licenses/by-nc-sa/4.0/ . Attribution, noncommercial use, share adaptations under the same terms. Provided without warranties; see LICENSE and README in the project.
+
+MASTER PROMPT: TRAVEL WEBSITE WITH PLANNING, A DIARY AND AUTOMATIONS
+
+Copy this entire text into a new chat. You may leave placeholders empty initially: the wizard will ask for the missing information.
+
+==================== START OF PROMPT ====================
+
+TASK
+
+Create a complete travel website for my next trip that remains usable over time, with daily itineraries, maps, weather, practical travel information, a travel diary and a PIN-protected internal area. It must work on desktop and smartphones and be installable as a PWA.
+
+Design the website as a personal digital travel guide: combine the orientation, background information, place descriptions and practical advice of a traditional offline guidebook with personal daily planning, current data and my own travel diary.
+
+Well-known guidebooks such as Baedeker or DuMont may serve as general inspiration. The standalone description below defines the structure and functionality; no particular book, previous travel website or access to earlier chats is assumed. Do not copy protected text, images or book layouts. Develop original content and an original design.
+
+Give this new trip its own project and data. An existing website, guidebook or screenshot may optionally provide an additional reference, but is not required. Do not modify other projects.
+
+Basic information, if already known:
+- Destination / regions: [REGIONS, COUNTRIES, PLACES]
+- Trip start: [DD.MM.YYYY]
+- Trip end, including return travel: [DD.MM.YYYY]
+- Number of travellers: [NUMBER]
+- Type of trip / transport: [CAR / FLIGHT / TRAIN / SHIP / COMBINATION]
+- Primary language: [LANGUAGE]
+- Additional languages: [LANGUAGES OR NONE]
+- Language mode: [ALL FULLY INTERACTIVE (DEFAULT) / PRIMARY LANGUAGE INTERACTIVE, ADDITIONAL LANGUAGES STATIC / SELECT PER LANGUAGE IF NEEDED]
+- Special requirements and constraints: [DETAILS]
+- Optional design reference: [URL / FILE / GUIDEBOOK / NONE]
+
+Unfilled placeholders are not facts. Resolve them through the wizard. Do not assume knowledge of the person, earlier trips or previous conversations. Only import personal content or credentials from other projects when explicitly instructed; do not invent personal example data.
+
+1. START WITH A WIZARD
+
+Run the wizard as a conversation. Ask no more than three clearly worded questions per message and wait for my answers. Offer suitable choices and free-text responses. Do not ask again for information already established. Unimportant questions may be skipped; explicitly label proposed defaults.
+
+Your first response must contain only a brief introduction and questions about the destination, travel dates and travellers. Build the website once the essential information is available. Optional details may be added later in the internal area.
+
+Collect the following step by step:
+
+Step A – Destination and dates:
+- Countries, regions and multiple trip stages if relevant.
+- Start and end, including outbound and return travel; fixed or flexible dates.
+- Number of adults and children; children's ages only where needed for planning.
+- Planning time zone and any differing local times.
+
+Step B – Getting there and local transport:
+- Transport for arrival and at the destination; combinations such as a flight plus a rental car.
+- Departure and return locations, existing tickets, flight or train times.
+- Desired stops, maximum driving times, breaks and toll/ferry preferences.
+- Vehicle, charging needs, public transport use or special mobility requirements where relevant.
+
+Step C – Accommodation and fixed appointments:
+- Accommodation for each stage, address, arrival and departure dates; already booked or still to be found.
+- Existing bookings, visits and events with fixed times.
+- Links or documents from which I want booking information imported.
+- Guest cards, discount cards, included services and other commitments.
+- Which of these details may appear in the general view.
+
+Step D – Interests and constraints:
+- Trip character: nature, hiking, culture, cities, beach, wellness, food or a mixture.
+- Desired daily pace, rest days, maximum walking distance, elevation gain and driving times.
+- Budget, restaurant preferences, dietary restrictions and accessibility where relevant.
+- Places I want to visit, excluded activities, special occasions and accompanying pets.
+- An existing itinerary or planning from scratch.
+
+Step E – Languages and functionality:
+- One language or multiple languages; primary and additional languages.
+- Explicitly ask about the language mode. Offer two options:
+  A: All selected languages support the full application, including PIN login, the internal area, planning, diary editing, image management and settings. This is the default.
+  B: Only the primary language supports the full application; additional languages provide static, read-only information pages for family, friends or other readers, without an internal area.
+- If different additional languages serve different purposes, let me select a mode for each language. Unless I choose otherwise, mode A applies to every selected language.
+- Whether language versions should be part of the same website or use separate addresses. The address choice does not determine functionality.
+- Translation of travel information and optionally diary entries; handling personal text: preserve the original and display translations in addition.
+- For static information pages: which approved content may appear? When and how often should it be translated from the current primary-language content and published? Ask for the time, interval, time zone, start and end dates, for example every night.
+- Ask whether further diary entries added after the trip should still be automatically included in the static language pages.
+
+Step F – Design and scope:
+- Ask about the desired mood and presentation, for example factual, calm, nature-oriented or an image-led travel magazine.
+- Ask whether an additional reference is available. “No reference” is a complete, valid answer; in that case, develop the design using the structure described here.
+- The frontend designer uses this information to develop a design suited to the destination. There is no need to obtain a reference or screenshot just to proceed.
+- Ask about optional features such as expense tracking, a packing list or a print export.
+
+Step G – Access and publication:
+- Who may read the itinerary and diary: just me, selected people or the public?
+- May the general travel view be accessible through a link without signing in?
+- The internal editing area must always use genuine PIN verification.
+- Which booking, personal and diary details must remain internal.
+- Desired publication, address and any custom domain.
+- Set the PIN through an appropriate protected setup; do not write it in plain text in a public prompt, source code or report.
+
+Step H – Automations:
+- Weather retrieval: desired interval, weather locations and forecast coverage.
+- Source checks: opening hours, prices, closures, events, transport and important links.
+- Start, end and time zone for each job; separately define post-trip behaviour for weather, source checks, backups and translations.
+- Backups and translation synchronisation where applicable. For static language pages, this includes actually translating and publishing according to the schedule set in Step E.
+- Where change notices should appear; send external notifications only when instructed to do so.
+
+Default replanning behaviour, adjustable in the wizard if needed:
+Update weather and travel information automatically. Prepare changes to daily itineraries only as concrete proposals and apply them only after my approval. This default applies unless I explicitly request a different mode.
+
+Suggestions for the wizard, not settings to impose without asking:
+- Weather hourly during the trip; once daily beforehand.
+- Check relevant travel information every morning.
+- Daily backup before translation synchronisation.
+- Stop trip-related updates after the trip; keep the diary accessible.
+Let me adjust these intervals and active dates.
+
+Step I – Bring everything together:
+Clearly show the collected details, unresolved points and suggested defaults. Only ask further questions about gaps that prevent correct implementation. Then complete the task in full.
+
+2. DESIGN, FRONTEND DESIGNER AND IMAGE RULES
+
+Work with a supporting specialist role called “Frontend Designer”. If the environment supports multiple agents, assign a separate agent to this role. Otherwise, take on the role yourself and do not claim that fictional collaboration actually occurred. Design remains part of the complete implementation.
+
+Frontend designer responsibilities:
+- Develop an original, appropriate design concept from the destination, type of trip and wizard answers.
+- Define a consistent system for colours, typography, spacing, image crops, maps, daily views and navigation.
+- Reflect regional characteristics using real location photographs and verifiable information, without stereotypes or invented depictions of places.
+- Design the home page, daily planning, diary and internal area for desktop and smartphones.
+- Check readability, contrast, keyboard operation and the usability of all forms and modal dialogs.
+- Apply the concept to the actual frontend and visually inspect the implemented pages. A mood board alone does not fulfil the task.
+
+Generic structure without an external template:
+- A header with the trip title, dates, main navigation and language switcher if relevant. Access to the internal area appears in fully interactive language versions; static information pages have no internal area.
+- A home page with a large real location photograph, a short trip introduction, an overview map, stages and essential travel information.
+- A chronological daily overview as a readable timeline or day cards with date, destination, image, short description and status; make the current day easy to reach during the trip.
+- A daily detail page with a hero image, date, title and introduction; followed by the schedule, main destinations, alternatives, map, travel or transfers, weather and practical advice.
+- Place and activity cards with real photographs, original short descriptions, highlights, suggested visit duration, opening hours, costs, booking links and navigation links.
+- Travel information organised into clear chapters: regions and places, background, practical information and topics relevant to the trip.
+- A diary with a daily heading, personal photographs and a personal account of the day, followed by activities actually visited.
+- An internal area with a clear management interface and readily identifiable save, edit and approval actions.
+
+Combine guidebook readability with website usability: a clear heading hierarchy, short introductions, well-structured background text, practical information boxes and consistent cards. Use a calm base surface, sufficient spacing, a few functional accent colours and images appropriate to the destination. The frontend designer tailors these choices; do not reuse the same interchangeable design for every destination.
+
+Ensure throughout:
+- Clearly visible navigation to planning, diary, weather, travel information and the internal area.
+- Readable contrast, particularly on buttons, cards and in the internal area.
+- Smartphone use without clipped tables or horizontal page scrolling.
+- Large controls, clear forms and reachable action buttons.
+- For multiple languages, switch to the same approved page and trip day where available in the selected language mode. The internal area only allows switching to other fully interactive languages.
+
+If an additional reference is provided, inspect only content that is actually accessible. Use it for guidance and do not claim a verified or exact reproduction without supporting evidence. If it is unavailable, continue with the standalone structure; ask only if an exact reproduction was explicitly requested.
+
+MANDATORY RULES FOR HERO IMAGES
+
+Hero images for the trip overview, stages and daily itineraries must be real photographs of the region shown or the actual planned places. Search the web for photographs of the specific daily destinations. A merely similar-looking location or a general landscape from another region is not a suitable substitute.
+
+Priority:
+1. A personal hero image explicitly selected by me always takes priority.
+2. Suitable personal photographs assigned to the day or place take priority over web images. Preserve my choice; where several personal images are equally suitable, let me select the hero image.
+3. If no suitable personal images exist, use a real photograph found on the web of a main destination for that day or the stage shown.
+
+Do not use AI-generated, generatively extended or multi-location composite hero images, even as temporary substitutes. Normal cropping and resizing must not misrepresent the location or scene.
+
+For every researched image, verify that it actually shows the stated place and suits the planned activity. Record the original page, image source, required attribution and usage terms; only use images with suitable usage permission. Ensure reliable delivery, appropriate resolution and descriptive alternative text.
+
+If no suitable usable photograph is available, temporarily use a neutral surface with a note explaining that a photograph is missing, and ask for a personal image if needed. Do not invent or generate a replacement photograph or claim that an unsuitable image depicts the place.
+
+After approved replanning, choose a real photograph suited to the new daily destination. Never automatically overwrite a personal hero image. In the diary, personal photographs remain personal photographs; a researched location image must not be presented as my own travel experience.
+
+3. PAGES AND TRIP STRUCTURE
+
+Implement at least:
+- A home page with a trip overview and stages.
+- Daily planning and individual daily pages.
+- An activity overview with search and region, date and status filters.
+- Maps and routes.
+- Accommodation and travel organisation, with appropriate visibility for personal details.
+- A weather page.
+- Practical travel information.
+- A travel diary with daily and activity views.
+- A PIN-protected internal area.
+- Custom destinations that I can add.
+
+These features form the full application. Fully interactive language versions offer the same functionality. Static information pages contain only the approved read-only views defined in Section 11.
+
+Tailor practical travel information to the countries and type of trip. Possible subpages include general information, traffic and transport, food and drink, souvenirs, guest cards and language help. Use only country information relevant to this trip.
+
+All views use the same reliable data source. Activities, map markers and diary references must have unambiguous links between them.
+
+4. DAILY PLANNING
+
+Plan coherent days based on the accommodation for each stage, existing bookings, interests and physical limits. Give each day:
+- A date, title, suitable description and a real daily photograph following the mandatory image rules in Section 2.
+- A main activity or sensibly ordered main activities.
+- A realistic sequence including durations, travel, transfers and breaks.
+- Suitable alternatives for poor weather or a lighter daily schedule.
+- Weather considerations, relevant opening hours, admission costs, reservation needs and direct links.
+- A map with accommodation or starting point, destinations, alternatives and relevant parking.
+- Where appropriate for the trip, two or three suitable restaurant suggestions at the destination or on the return route.
+
+Explicitly account for outbound travel, accommodation changes, rest days and the return journey. Do not add normal sightseeing days on top of fully occupied travel days.
+
+Include a short explanation for restaurant suggestions, a price range and any available rating, with source and check date. Do not invent ratings or prices.
+
+For hikes, provide the actual starting point, parking, trail markings, distance, difficulty, elevation gain, duration and official route description. Account for access restrictions and required bus connections. Only use existing GPX data and elevation profiles with traceable provenance.
+
+5. MAPS, ROUTES AND NAVIGATION
+
+Show appropriate maps and navigation links for the chosen type of travel:
+- A daily route with accommodation or starting point and a sensible sequence.
+- Outbound and return journeys with the requested stops and breaks.
+- Suitable parking, public transport stops, airports or ferry terminals.
+- Different markers for main destinations, alternatives, restaurants and accommodation.
+- Routes compatible with the transport actually permitted.
+
+Check parking options, access rules and public transport for the relevant date. Prefer free parking if requested, without creating large detours or unsuitable starting points.
+
+Use verified deep links to specific places, tickets and official routes. Only show a vehicle navigation integration, such as “send to vehicle navigation”, if a supported interface exists and works. Otherwise, provide working navigation links.
+
+6. ACTIVITIES AND DYNAMIC PLANNING
+
+Manage activities with stable identifiers and at least:
+- Name, region, coordinates and sources.
+- Main destination, alternative or not yet assigned.
+- Planned date and order.
+- Status: planned, visited, skipped or no longer wanted.
+- Actual visit date.
+- Opening hours, costs, booking needs and weather dependence.
+- Notes, images and diary references.
+
+Let me add custom destinations with a name and link and complete the details later. Destinations must actually be saved in the central data store.
+
+For a replanning proposal initiated by me:
+- Only replan future days; change today only if explicitly requested.
+- Preserve visited activities, past days, fixed bookings and locked plans.
+- Consider still-planned, unassigned activities within their appropriate trip stage.
+- Suggest additions only if they are geographically appropriate for a daily destination. Use a maximum distance of 15 km as a configurable suggestion; document the calculation method and also check actual travel times.
+- Show activities that cannot sensibly be scheduled, explain why and ask for manual assignment.
+- Avoid overcrowded days and preserve rest days.
+- Show before/after comparisons with affected days, reasons and conflicts.
+
+The “Create a new itinerary” button must start a real task or create a saved, editable proposal. It must not merely trigger a local random distribution or report success without processing.
+
+After my approval, update the entire affected day: main destinations, alternatives, title, accompanying text, hero image, weather considerations, maps, markers, routes, parking, restaurants and schedule. No remnants of the previous plan may remain. Personal hero images always retain priority; all automatically selected replacements must follow the real location photograph rules in Section 2.
+
+If the trip is shortened, adjust every affected view. Preserve existing diary entries; do not remove them as a side effect of a plan change.
+
+7. TRAVEL DIARY
+
+The diary records actual experiences. Do not invent visits, accounts of experiences, images or retrospective status changes.
+
+For each day:
+- A personal daily note, multiple images and captions.
+- A personal hero image.
+- Activities actually visited, with their notes and images.
+- A visible distinction between originally planned and actually visited.
+- Saved weather information with accurate labelling.
+
+Page layout: daily photographs and the daily note first; related activities with photographs and notes below. Unvisited planned destinations must not be presented as experiences.
+
+Provide an image lightbox with enlargement, swipe gestures, previous/next controls and an easily visible close control. It must work even with exactly one image. Support image ordering and captions.
+
+In fully interactive language versions, let me edit status and “Visited on” directly from the diary view after PIN login. Daily and activity notes support multiple images. When saving or uploading, show actual success or a clear error. Static language pages display approved diary entries as read-only content; they have no editing or upload features.
+
+8. INTERNAL AREA AND PIN
+
+The internal area is accessible through a visible header link in the primary language and all other fully interactive language versions. Translate its entire interface into these languages. Static information pages must contain neither an internal area nor its controls or private content.
+
+The internal area includes:
+- Editing itineraries, activities, status, visit dates and rest days.
+- Custom destinations, daily and activity notes, images and hero-image selection.
+- Accommodation and confidential booking information.
+- Replanning proposals with approval or rejection.
+- Language, visibility, weather and automation settings.
+- Run status, errors, change history, backup and restoration.
+- A dynamic day-status overview available internally only.
+
+Implement genuine server-side PIN verification. Protect write operations and private read operations on every relevant endpoint. Use secure PIN hashing, limited failed attempts, expiring sessions and logout. The PIN must not appear in the frontend or publicly accessible files. Merely hiding a menu does not secure access.
+
+Private media and booking documents require the same access protection; public file links must not bypass it. Define the specific visibility in the wizard. A publicly reachable link without directory listing is not a substitute for access control.
+
+Manage the PIN through a protected setup. Do not use credentials from other trips or projects.
+
+9. WEATHER WITH TRACEABLE DATA
+
+Use available, verifiable weather sources for the region, preferably the responsible weather services or suitable documented providers. Data must come from an actual retrieval.
+
+Show:
+- Weather for accommodation and planned daily destinations.
+- Temperature, precipitation and its probability, wind and relevant warnings where available.
+- Source, location or coordinates, validity period and time zone.
+- “Weather data updated” as the time of the last successful retrieval.
+- Clear labels for outdated or missing data.
+- Indoor/outdoor recommendations with traceable reasoning.
+
+Distinguish observations, forecasts and longer-term trends. Do not show a precise three-week forecast if the source does not reliably cover that period. A clearly labelled climatological guide may be shown for the remaining period.
+
+Weather icons and precipitation type must match the supplied data. Do not infer snow or rain solely from a single temperature value. Indicate uncertainty when sources conflict.
+
+Save the weather information used for daily planning for the diary. A saved forecast is not evidence of the weather that actually occurred; label it accordingly. Historical observations may additionally be imported from a suitable source.
+
+If retrieval fails, access is refused or permissions are missing, do not invent replacement data. Retain existing valid data with its original timestamp and show the error internally. Only use an available alternative source transparently.
+
+10. AUTOMATIONS AND CHANGE CHECKS
+
+Actually configure the jobs selected in the wizard. They must be able to run even when nobody has the website or PWA open. Use available server-side or external scheduling; browser refresh alone does not fulfil this task.
+
+A – Weather:
+Retrieve, validate and save data at the agreed interval. Fully interactive language versions share the same current weather data. Static language pages only receive the weather data at their next scheduled publication and show both the actual data timestamp and their publication status. Updated data may generate notices or replanning proposals, but must not independently change a daily itinerary.
+
+B – Travel information:
+Check relevant sources for upcoming activities for changes to opening hours, closed days, prices, guided tours, tickets, closures, events and transport conditions. Consider travel dates, season and public holidays. Where possible, check whether links still reach the specific destination and remain relevant.
+
+Save the source, check time and relevant change. Distinguish an evidenced change, unchanged data and a failed check. An inaccessible website does not prove a closure.
+
+C – Change proposals:
+Show internally what changed, which days are affected and which alternative would make sense. Apply changes to daily itineraries only after my approval. Protect fixed bookings, actual visits and personal text.
+
+D – Backups:
+Back up itinerary data, the diary, media references, settings and language content versions where relevant. Provide restoration that actually works. Log the scope and outcome. Backup frequency and retention must be configurable.
+
+E – Translations and static publications:
+For fully interactive language versions, consider shared changes made in any interactive language, synchronise text using the agreed process, and preserve the original language and manually maintained translations. Status, dates, selected images and activity references must remain on the same shared data source.
+
+For static information pages, capture a consistent snapshot of approved primary-language content at the agreed time, translate it into the target languages and publish complete static read-only views. Include approved daily itineraries, travel information, saved weather data and optionally the diary, including personal hero images, photographs and captions.
+
+Publish only content intended for these readers. Private booking data, internal notes, credentials and editing features must not be included in the generated files. Show the time of the last successful translation or publication with time zone and the underlying content version.
+
+Replace the previous static version only after successful generation and checking. If an error occurs, retain the last successfully published version with its actual timestamp and show errors internally. Also provide manual triggering of translation and publication in the full application. Do not create diverging activity lists or overwrite manually maintained translations without asking.
+
+All jobs have:
+- A clear purpose, interval, time zone, start and end.
+- Displays of the last attempt, last success and next scheduled run.
+- Error logs and limited retries.
+- Protection against duplicate processing and concurrent overwriting.
+- Configurable pausing and manual triggering.
+- Targeted retrieval where possible instead of unnecessary repeated full research.
+
+Show a job as active only if it has actually been configured. If a required interface, permission or runtime capability is missing, state the specific limitation and what must be added. A mock feature or a mere description of automation does not replace a configured job.
+
+This prompt commissions a new trip. If other travel projects exist, do not change their schedules.
+
+11. MULTILINGUAL SUPPORT: INTERACTIVE LANGUAGE VERSIONS OR STATIC INFORMATION PAGES
+
+DEFAULT – MODE A: ALL LANGUAGES FULLY INTERACTIVE
+
+Unless explicitly selected otherwise, every specified language supports the full application. For example, two travellers can use the application in German and Turkish respectively and maintain the same trip together.
+
+Translate the entire interface: navigation, forms, PIN login, the internal area, diary editing, image management, status and visit date, replanning and approval, settings, automations, backup and restoration, and success and error messages. No feature may be missing solely because of the selected language.
+
+Use shared trip data with separate language texts. Dates, status, visit dates, images, hero-image choices, maps, activities and bookings refer to the same records. A change in an interactive language is saved to the shared data source and becomes visible accordingly in the other interactive languages; do not create independent copies of the trip.
+
+Allow personal text to be entered in any interactive language. Preserve the original text and its language, display translations in addition and protect manually maintained translations from automatic overwriting. When translation synchronisation is needed, account for changes from all interactive languages and mark pending translations.
+
+Language does not change access rights. Protect the internal area with the same effective access control in every language.
+
+OPTION – MODE B: PRIMARY LANGUAGE INTERACTIVE, ADDITIONAL LANGUAGES STATIC
+
+The primary language contains the full application, including the internal area. Additional languages inform other people and offer approved read-only views only.
+
+Generate static pages in these languages from the approved primary-language content snapshot: trip overview, daily itineraries, place information, maps or navigation links, practical travel information, saved weather data and optionally the travel diary. Translate language, image captions and labels appropriately. Navigation, image lightboxes and other purely display-related features may remain functional; static means that trip data cannot be edited.
+
+These pages contain no PIN login, internal area, editing forms, uploads, replanning approvals or management features. Private data must not appear visibly or in delivered source code, embedded data or unprotected media. Do not link from static language pages to internal views.
+
+Translation and publication run automatically at the time agreed in the wizard, for example every night. This must also work while the website is closed. Static versions are published snapshots and do not need to reflect every change immediately. Clearly show their update status; keep the weather timestamp distinct from the publication time.
+
+The access and publication rules agreed in the wizard also apply to static language pages. A static version is not automatically public.
+
+FOR BOTH MODES
+
+Preserve proper names and official place names appropriately. Set each page's language correctly. Missing translations must not result in empty labels; transparently identify temporary primary-language text where needed.
+
+Switch languages to the same approved page or trip day. From the internal area, switching is only possible to other fully interactive languages; a static mode has no internal view.
+
+Language versions may be part of one website or use separate addresses. Fully interactive language versions must be functionally equivalent; static information pages intentionally provide only the agreed read-only scope. If a mixed setup is explicitly requested, record the mode for each language.
+
+Show the language configuration internally and, for static versions, the last successful run, next scheduled run, publication status and any errors.
+
+12. PWA AND RELIABILITY
+
+Create a genuinely installable PWA with a manifest, appropriate icons and working update behaviour.
+
+Where possible, make essential previously loaded travel information available offline. Indicate offline status and the saved content version. Private data must not enter an unprotected public cache.
+
+If offline editing is offered, queued changes must later synchronise reliably and conflicts must be visibly resolved. Otherwise, indicate that editing requires an online connection.
+
+In smartphone and PWA modes:
+- Modal dialogs must remain fully usable.
+- Keep replanning text concise and action buttons continuously reachable.
+- Do not place important buttons below excessively long explanatory text or outside the visible area.
+- Account for the on-screen keyboard, small displays and safe screen insets.
+
+Persist trip data and photographs durably. Local browser storage alone is insufficient for the diary and use across devices.
+
+13. FACTS, SOURCES AND PRIVACY
+
+Research current travel information using suitable sources. Prefer official attraction websites, tourism organisations, transport operators, weather services and public authorities.
+
+Label estimates and unresolved details. Do not invent opening hours, prices, connections, ratings, booking conditions, historical weather observations or integration capabilities.
+
+Protect booking references, personal contact details, documents and precise private addresses according to the selected visibility. Use only the data required for the features. Store API keys and other secrets securely on the server.
+
+If an external reference or another travel project is provided, use only the explicitly requested elements whose use is permitted. Personal content from other trips or people must not become example data for this trip.
+
+14. VERIFICATION AND HANDOVER
+
+Actually verify the essential functionality before handover:
+- All days, accommodation changes and routes match the trip dates.
+- Maps, parking, restaurants and accompanying text match the planned destinations.
+- Activities are centrally stored and consistent everywhere.
+- Personal photographs and diary entries survive plan changes; personal hero images always take priority.
+- All researched hero images are real, verified photographs of the places shown; sources and usage terms are documented.
+- The website works without a previous travel website or guidebook template and has a consistent design suited to the destination.
+- PIN protection blocks unauthorised access, including through direct endpoints.
+- Notes, status changes, photographs, the lightbox and saving work.
+- Smartphone layouts, PWA, modal dialogs and language switching work according to the selected language mode.
+- By default, every selected language has the full feature set, including translated PIN access and the internal area; changes use shared storage.
+- If static language pages were selected: no internal content or write features, only approved data and media, and functioning read-only views.
+- Scheduled translation and publication of static versions work; content version, publication time and weather timestamps are shown correctly.
+- Weather sources, timestamps and error states are shown correctly.
+- Automations are actually configured and their run information is traceable.
+- Links and the publication address work.
+
+Use suitable functional checks and inspect relevant pages in desktop and smartphone layouts. Do not claim a successful check that was not performed.
+
+Hand over:
+- The completed website with the agreed access and publication status.
+- The link and brief instructions for planning and the diary.
+- The active automation configuration, including active dates and time zones.
+- The mode for each language and, for static language pages, their addresses, approved content and translation/publication schedule.
+- Clearly stated remaining limitations or information still needed.
+- Guidance for protected PIN setup, backup and restoration.
+
+Implement every agreed feature. Complete implementation and verification in full; if information is missing, complete the independent parts already possible.
+
+START NOW:
+Begin with Step A of the wizard. Ask for the destination, travel dates and number of travellers wherever that information is still missing.
+
+===================== END OF PROMPT =====================
