@@ -19,15 +19,47 @@ Eine frühere Webseite oder ein bestimmter Reiseführer wird nicht benötigt. Ge
 
 Aktuelle Produktinformationen: [ChatGPT Sites](https://learn.chatgpt.com/docs/sites) und [ChatGPT Work](https://learn.chatgpt.com/docs/get-started-with-work).
 
-### Schnellstart
+### So benutzt Du den Prompt
 
-1. Öffne [den deutschen Masterprompt](prompts/reisefolio.de.txt). Über **Raw** kannst Du den reinen Text anzeigen und vollständig kopieren.
-2. Starte in einer geeigneten ChatGPT-Umgebung einen neuen Chat und füge den gesamten Text ein.
-3. Lass unbekannte Platzhalter offen. Der Wizard fragt höchstens drei Punkte je Nachricht ab.
-4. Beantworte die Fragen und prüfe die vorgeschlagene Planung, Sichtbarkeit und Konfiguration der Automatismen.
-5. Lass ChatGPT die Webseite umsetzen und die tatsächlichen Funktionen prüfen. Richte die PIN geschützt ein und prüfe die Veröffentlichung aus Sicht der vorgesehenen Leser.
+Der Masterprompt startet einen geführten Arbeitsprozess: **Prompt einfügen → Wizard beantworten → erste Webseite prüfen → per Chat verfeinern → veröffentlichen → später weiter anpassen.** Du beschreibst Deine Wünsche in normaler Sprache; Programmierkenntnisse werden für diesen Ablauf nicht vorausgesetzt.
 
-Alternativ steht [eine vollständige englische Übersetzung](prompts/reisefolio.en.txt) zur Verfügung. Beide Fassungen beauftragen dieselben Funktionen. Die Sprache des Prompts legt die Sprache der späteren Webseite nicht fest; diese wählst Du im Wizard.
+#### 1. Masterprompt starten
+
+Öffne [den deutschen Masterprompt](prompts/reisefolio.de.txt), zeige über **Raw** den reinen Text an und kopiere ihn vollständig in einen neuen Chat in der unter „Voraussetzungen“ beschriebenen ChatGPT-Umgebung. Sende den Text ab – eine zusätzliche Startanweisung ist nicht erforderlich. Unbekannte Platzhalter dürfen offen bleiben.
+
+Alternativ steht [eine vollständige englische Übersetzung](prompts/reisefolio.en.txt) zur Verfügung. Beide Fassungen beauftragen dieselben Funktionen. Die Sprache der späteren Webseite wählst Du im Wizard.
+
+#### 2. Den Wizard beantworten
+
+ChatGPT fragt Schritt für Schritt nach Reiseziel, Zeitraum, Reisenden und weiteren Rahmenbedingungen, mit höchstens drei Fragen je Nachricht. Beantworte die Fragen, ergänze vorhandene Buchungen oder Wunschziele und korrigiere Angaben bei Bedarf. Sobald die entscheidenden Informationen vorliegen, soll ChatGPT die erste Webseite erstellen.
+
+#### 3. Die Webseite im Dialog ausarbeiten
+
+Öffne die erste Fassung und prüfe Planung, Gestaltung und Bedienung. **Arbeite anschließend mit weiteren Nachrichten im selben Chat weiter:** Lass fehlende Inhalte ergänzen, einzelne Tage überarbeiten, das Design anpassen und Funktionen verbessern, bis die Webseite zu Deiner Reise passt. Je nach Umfang sind dafür mehrere Abstimmungen nötig.
+
+Formuliere konkrete Änderungsaufträge und nenne den betroffenen Tag oder Bereich. Beschreibe bei Fehlern, was Du getan hast, was passiert ist und welches Ergebnis Du erwartest; ein Screenshot kann helfen. Prüfe das Ergebnis nach jeder Änderung.
+
+Beispielprompts – Platzhalter vorher ersetzen:
+
+| Wunsch | Beispiel |
+|---|---|
+| Tagesplanung verfeinern | „Plane den [DATUM] mit höchstens [X] km Fußweg neu. Passe danach auch Texte, Karten, Parkplätze und Restaurants dieses Tages an. Bewahre meine Tagebucheinträge und eigenen Hero-Bilder.“ |
+| Inhalte ergänzen | „Ergänze zu den Aktivitäten am [DATUM] die Öffnungszeiten, Eintrittspreise und offiziellen Buchungslinks mit Quelle und Prüfdatum.“ |
+| Bedienung verbessern | „Die Tageskarten sind auf meinem Smartphone zu lang. Kürze die Vorschautexte und halte die Buttons zum Öffnen und Bearbeiten gut erreichbar.“ |
+| Tatsächliche Erlebnisse eintragen | „Am [DATUM] haben wir [ORT] besucht und [AKTIVITÄT] ausgelassen. Aktualisiere den Besuchsstatus und übernimm diesen Text als Tagesnotiz: [TEXT].“ |
+| Nachträglich umplanen | „Wir reisen schon am [DATUM] zurück. Passe die restliche Planung und die Rückreiseroute an. Erhalte alle vorhandenen Tagebucheinträge und Fotos.“ |
+
+#### 4. Prüfen und veröffentlichen
+
+Lass ChatGPT die vereinbarten Funktionen tatsächlich prüfen, insbesondere PIN-Schutz, Speichern, Fotos, Sprachversionen, Smartphone-Bedienung und eingerichtete Hintergrundaufgaben. Teste selbst die für Dich wichtigen Abläufe. Richte die PIN geschützt ein und lege fest, wer die Webseite sehen darf. Beauftrage die Veröffentlichung des geprüften Stands ausdrücklich und kontrolliere danach den veröffentlichten Link.
+
+#### 5. Während und nach der Reise weiterarbeiten
+
+Nutze den bisherigen Chat oder öffne die bestehende Webseite wieder in ChatGPT Sites und beschreibe die gewünschten Änderungen. Bei einem neuen Chat gib den Link an und sage ausdrücklich, dass diese bestehende Webseite bearbeitet werden soll. Für spätere Anpassungen musst Du den gesamten Masterprompt nicht erneut einfügen. Für eine neue Reise startest Du dagegen einen neuen Durchlauf.
+
+So kannst Du später Ziele austauschen, den Reisezeitraum ändern, Funktionen ergänzen oder die Gestaltung weiterentwickeln. Notizen, Fotos und Besuchsstatus kannst Du nach ihrer Umsetzung auch direkt im PIN-geschützten internen Bereich pflegen.
+
+Weitere Hinweise zum Erstellen und schrittweisen Überarbeiten bietet die [offizielle ChatGPT-Anleitung zu Sites](https://learn.chatgpt.com/docs/sites/creating-a-site).
 
 ### Was der Prompt beauftragt
 
@@ -96,17 +128,49 @@ No previous website or specific guidebook is required. Design and content are ta
 
 Current product information: [ChatGPT Sites](https://learn.chatgpt.com/docs/sites) and [ChatGPT Work](https://learn.chatgpt.com/docs/get-started-with-work).
 
-### Prompt languages and quick start
+### How to use the prompt
+
+The master prompt starts a guided workflow: **paste the prompt → answer the wizard → review the first website → refine it through chat → publish → return for later changes.** Describe what you want in everyday language; this workflow does not assume programming knowledge.
 
 **The original master prompt is written in German. A complete English translation is also included.** The English version has not yet undergone a separate full website implementation run.
 
-1. Open the [English prompt](prompts/reisefolio.en.txt), or choose the [German original](prompts/reisefolio.de.txt). Use **Raw** to view and copy the entire plain text.
-2. Start a new chat in a suitable ChatGPT environment and paste the full text.
-3. Leave unknown placeholders empty. The wizard asks no more than three questions per message.
-4. Answer the questions and review the proposed itinerary, visibility and automation settings.
-5. Have ChatGPT implement the website and verify its actual functionality. Set the PIN through a protected setup and check the published site from the intended reader's perspective.
+#### 1. Start the master prompt
 
-Both versions commission the same capabilities. The language of the prompt does not determine the website's language; choose that in the wizard.
+Open the [English prompt](prompts/reisefolio.en.txt), or choose the [German original](prompts/reisefolio.de.txt). Use **Raw** to view the plain text and copy it in full into a new chat in the ChatGPT environment described under “Requirements”. Send the text – no extra start instruction is needed. You may leave unknown placeholders empty.
+
+Both versions commission the same capabilities. Choose the website's languages in the wizard.
+
+#### 2. Answer the wizard
+
+ChatGPT asks about your destination, dates, travellers and other requirements step by step, with no more than three questions per message. Answer the questions, add existing bookings or places you want to visit, and correct details where needed. Once the essential information is available, ChatGPT should build the first website.
+
+#### 3. Develop the website through conversation
+
+Open the first version and review the itinerary, design and usability. **Continue with follow-up messages in the same chat:** ask for missing content, revised daily plans, design changes and improved functionality until the website fits your trip. Depending on its scope, this may take several rounds.
+
+Give specific change requests and identify the affected day or section. For bugs, explain what you did, what happened and what you expected; a screenshot may help. Check the result after each change.
+
+Example prompts – replace the placeholders before use:
+
+| Goal | Example |
+|---|---|
+| Refine a daily plan | “Replan [DATE] with no more than [X] km of walking. Update that day's text, maps, parking and restaurants as well. Preserve my diary entries and personal hero images.” |
+| Add information | “Add opening hours, admission prices and official booking links for the activities on [DATE], including sources and check dates.” |
+| Improve usability | “The day cards are too long on my smartphone. Shorten the preview text and keep the open and edit buttons easy to reach.” |
+| Record actual experiences | “On [DATE] we visited [PLACE] and skipped [ACTIVITY]. Update the visit status and save this as the daily note: [TEXT].” |
+| Adjust the trip later | “We are returning home on [DATE] instead. Update the remaining itinerary and return route. Preserve all existing diary entries and photos.” |
+
+#### 4. Check and publish
+
+Have ChatGPT actually verify the agreed features, particularly PIN protection, saving, photos, language versions, mobile usability and configured background jobs. Try the workflows that matter most to you. Set the PIN through a protected setup and choose who may see the website. Explicitly request publication of the reviewed version, then check the published link.
+
+#### 5. Continue during and after the trip
+
+Use the existing chat, or reopen the existing website in ChatGPT Sites and describe the changes you want. In a new chat, provide the link and explicitly ask to edit that existing website. You do not need to paste the entire master prompt again for later changes. For a new trip, start a fresh run.
+
+You can later replace destinations, change travel dates, add features or refine the design. Once implemented, notes, photos and visit status can also be managed directly in the PIN-protected internal area.
+
+See the [official ChatGPT Sites guide](https://learn.chatgpt.com/docs/sites/creating-a-site) for more on creating and refining a website step by step.
 
 ### What the prompt commissions
 
